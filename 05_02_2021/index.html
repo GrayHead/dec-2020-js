@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+        <ul>
+            <li>anya</li>
+            <li>max</li>
+            <li>oles</li>
+        </ul>
+
+
+        <script>
+			let inputValue = 'a';
+			let ul = document.getElementsByTagName('ul')[0];
+
+			let liList = document.getElementsByTagName('li');
+			for (const liListElement of liList) {
+				console.log(liListElement);
+				let text = liListElement.innerText;
+				console.log(text);
+
+				if (!text.includes(inputValue)) {
+					liListElement.parentNode.removeChild(liListElement);
+				}
+
+			}
+
+			// {
+			//
+			// 	var a = 100;
+			// 	let b = 200;
+			//
+			// }
+			//
+			// console.log(a); // +
+			// console.log(b); error
+
+
+			let arr1 = [11, 22, 33, 44, 55, 66, 77, 88, 99, 100100, 2020];
+			// i+=2 i=i+2
+
+			let x = 0;
+			x++;
+			x = x + 1; // x= 2
+			x += 2; // x = x+2
+			let a = 0;
+			// let b = a++; // b = 0 ; a++ -> 1
+			let b = ++a; // b = 1 ; a++ -> 1
+
+
+			// reverse loop
+
+
+			//arr1 -> 4   last index - 3 min index - 0
+
+			for (let i = arr1.length - 1; i >= 0; i--) {
+				const bElement = b[i];
+			}
+
+			// for of || for in
+
+			// only for ->[]
+			for (const arrElem of arr1) {
+
+			}
+
+
+			let user = {name: 'vasya', age: 123, status: false};
+			for (const key in user) {
+				console.log(key, user[key]);
+
+			}
+
+
+			// if else in loop
+
+			// for (const number of arr1) {
+			//
+			// 	if (number > 20) {
+			// 		console.log(number);
+			// 		break;
+			// 	}
+			//
+			// }
+
+
+			// loop in loop
+
+			// for (let i = 0; i < 3; i++) {
+			// 	for (let j = 0; j < 5; j++) {
+			// 		console.log(i, j);
+			//
+			// 	}
+			//
+			// }
+
+			// sibling elements in array
+
+			for (let i = 0; i < arr1.length; i++) {
+				console.log(arr1[i]); // current element
+				console.log(arr1[i - 1]); // previous siblibng
+				console.log(arr1[i + 1]); // next siblibng
+			}
+
+			//   swap every 3
+
+			// for (let i = 0; i < arr1.length; i++) {
+			// 	if (i % 3 == 0) {
+			// 		arr1[i] = 'sjdhgajhgd';
+			// 	}
+			//
+			// }
+
+			// for (let i = 0; i < arr1.length; i += 3) {
+			// 	arr1[i] = 'askjhgdahgdfhsa';
+			//
+			// }
+			console.log(arr1);
+
+			// splice || slice
+
+
+			// let splicedElements = arr1.splice(2, 2, 'ads', 'qwe', true);
+			// console.log(arr1, splicedElements);
+
+			let segment = arr1.slice(3, 6);
+			console.log(segment, arr1);
+
+
+        </script>
+
+    </body>
+</html>
