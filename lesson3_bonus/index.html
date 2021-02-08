@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+
+    </head>
+    <body>
+        <h1 style="background: tomato; height: 800px; width: 100%;">products store</h1>
+
+
+        <style>
+            body {
+                display: flex;
+                /*justify-content: space-around;*/
+                flex-wrap: wrap;
+            }
+
+            .product-item {
+                width: 23%;
+                height: 400px;
+                background: silver;
+                margin: 0 1% 20px 1%;
+                overflow: hidden;
+            }
+
+            img {
+                width: 100%;
+            }
+        </style>
+
+
+        <script>
+			let products = [
+				{
+					title: 'milk',
+					price: 22,
+					image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300x300-3.jpg'
+				},
+				{
+					title: 'juice',
+					price: 27,
+					image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+				},
+				{
+					title: 'tomato',
+					price: 47,
+					image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+				},
+				{
+					title: 'tea',
+					price: 15,
+					image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+				},
+				{
+					title: 'bread',
+					price: 23,
+					image: 'https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg'
+				},
+				{
+					title: 'bread',
+					price: 23,
+					image: 'https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg'
+				}, {
+					title: 'juice',
+					price: 27,
+					image: 'https://images-na.ssl-images-amazon.com/images/I/61jL2GCuKLL._SX679_PIbundle-24,TopRight,0,0_AA679SH20_.jpg'
+				},
+				{
+					title: 'tomato',
+					price: 47,
+					image: 'https://dictionary.cambridge.org/ru/images/thumb/tomato_noun_001_17860.jpg?version=5.0.74'
+				},
+				{
+					title: 'tea',
+					price: 15,
+					image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
+				},
+				{
+					title: 'bread',
+					price: 23,
+					image: 'https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg'
+				},
+				{
+					title: 'bread',
+					price: 23,
+					image: 'https://tastesbetterfromscratch.com/wp-content/uploads/2020/03/Bread-Recipe-5-2.jpg'
+				},
+			];
+
+
+			for (let i = 0; i < products.length; i++) {
+				document.write(`
+                    <div class="product-item">
+                        <h1>${products[i].title} - ${products[i].price}</h1>
+                        <img src="${products[i].image}" alt="${products[i].title}">
+                    </div>
+                `);
+			}
+
+			let menuList = ['courses', 'about', 'reviews', 'images', 'tasks'];
+			document.write('<ul>');
+			for (const item of menuList) {
+				document.write(`
+                        <li>${item}</li>
+                    `);
+			}
+			document.write('</ul>');
+        </script>
+
+    </body>
+</html>
