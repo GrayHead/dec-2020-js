@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+
+			//JSON
+
+
+			// let user = {
+			// 	name: 'vasya',
+			// 	age: 123,
+			// 	wife: {
+			// 		name: 'anya',
+			// 		age: 123,
+			// 		asd: undefined
+			// 	}
+			// };
+			//
+			// let jsonUser = JSON.stringify(user);
+			// console.log(user);
+			// console.log(jsonUser); // string -> obj?
+			// let clearUser = JSON.parse(jsonUser);
+			// console.log(clearUser);
+
+			fetch('https://api.sampleapis.com/futurama/characters')
+				.then(response => response.json()) // json -> obj js
+				.then(characters => {
+					for (const character of characters) {
+						document.write(`
+                            <div>
+                                <h3>${character.name.first} ${character.name.middle} ${character.name.last}</h3>
+                                <p>${character.gender} ${character.species}</p>
+                                <img src="${character.images.main}" alt="">
+                            </div>
+                        `);
+					}
+
+				});
+
+			let users = [
+				{name: 'vasya', age: 31, status: false},
+				{name: 'petya', age: 30, status: true},
+				{name: 'kolya', age: 29, status: true},
+				{name: 'olya', age: 28, status: false},
+				{name: 'max', age: 30, status: true},
+				{name: 'anya', age: 31, status: false},
+				{name: 'oleg', age: 28, status: false},
+				{name: 'andrey', age: 29, status: true},
+				{name: 'masha', age: 30, status: true},
+				{name: 'olya', age: 31, status: false},
+				{name: 'max', age: 31, status: true}
+			];
+
+			let jsonUsers = JSON.stringify(users);
+			let usersX = JSON.parse(jsonUsers);
+
+			for (const usersX1 of usersX) {
+
+			}
+
+
+        </script>
+    </body>
+</html>
