@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>lesson3</title>
+        <link rel="stylesheet" href="">
+
+        <style>
+
+            .acdc > b > span {
+                background: silver;
+            }
+
+            .queen {
+                background: cornflowerblue;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <!--        // document.createElement-->
+        <!--        // element.appendChild-->
+        <!--        // loop + appendchild-->
+
+        <div class="acdc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam delectus est eum ex ipsa,
+            mollitia non
+            odit tempore <b><span>veniam</span> veritatis</b>.
+        </div>
+        <div id="target">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum, facere.</div>
+        <p class="acdc">Lorem <span>ipsum</span> dolor sit amet, consectetur adipisicing elit. Distinctio dolore enim
+            eos eveniet
+            fuga hic illum laborum minus non odio perferendis, placeat quis, reiciendis, similique voluptate! Nostrum
+            quibusdam reprehenderit <span>repudiandae</span>?
+        </p>
+        <ul id="target">
+            <li>asd<span>asd</span></li>
+            <li>asdasd</li>
+            <li>asdasd</li>
+            <li>asdasd</li>
+        </ul>
+
+        <script>
+			let user = {
+				name: 'vasya',
+				age: 123,
+				wife: {
+					imya: 'anna',
+					age: 18,
+					status: false,
+					parents: [
+						{type: 'father', name: 'max', age: 65}, // 0
+						{type: 'mother', name: 'olga', age: 60}, // 1
+					]
+				}
+			};
+
+			// console.log(user.wife.status);
+			//
+			// console.log(user.wife.parents[1].name);
+			// for (const paernt of user.wife.parents) {
+			// 	console.log(paernt);
+			//
+			// }
+
+			// let userKeys = [];
+			// for (let fieldName in user) {
+			// 	console.log(fieldName);
+			// 	userKeys.push(fieldName);
+			// }
+			// console.log(userKeys);
+			// let keys = Object.keys(user);
+			// console.log(keys);
+
+			// console.log(user);
+			// let user2 = user;
+			// user2.status = true;
+			// console.log(user);
+			//
+			// let i = 0;
+			// let a = i;
+			// a++;
+			// console.log(a);
+			// console.log(i);
+			//
+			// console.log('asdasd'[0]);
+			//
+			// let word = 'okten';
+			// let word2 = word;
+			// word2 += '!';
+			// console.log(word, word2);
+			//
+			//
+			// let users = [
+			// 	{name: 'vasya', age: 31, status: false},
+			// 	{name: 'petya', age: 30, status: true},
+			// 	{name: 'kolya', age: 29, status: true},
+			// 	{name: 'olya', age: 28, status: false},
+			// 	{name: 'max', age: 30, status: true},
+			// 	{name: 'anya', age: 31, status: false},
+			// 	{name: 'oleg', age: 28, status: false},
+			// 	{name: 'andrey', age: 29, status: true},
+			// 	{name: 'masha', age: 30, status: true},
+			// 	{name: 'olya', age: 31, status: false},
+			// 	{name: 'max', age: 31, status: true}
+			// ];
+			//
+			// let data = JSON.stringify(users);
+			// console.log(data);
+			//
+			// console.log(JSON.parse(data));
+
+			console.log(document.head);
+			console.log(document.body);
+			console.log(document.body.children);
+			console.log(document.body.children[0]);
+
+			let target = document.getElementById('target'); // only first with targt id
+			// console.log(target);
+			// console.log(target.innerText);
+			// target.innerText = 'okten oketn okten';
+			// target.style.background = 'red';
+			// target.style.marginTop = '100px';
+
+			// let elementNodeListOf = document.querySelectorAll('html body #target');
+			// let elementNodeListOf = document.querySelector('div');
+			// console.log(elementNodeListOf);
+
+			// let divList = document.getElementsByTagName('div'); // []
+			// console.log(divList[1]);
+			//
+			// for (const divElement of divList) {
+			// 	divElement.innerText = '!!!!!!!!!!!!';
+			//
+			// }
+
+			let acdcList = document.getElementsByClassName('acdc');
+			console.log(acdcList);
+
+			// console.log(target.classList);
+			// target.classList.add('queen');
+			// target.classList.remove('queen');
+
+			for (const acdcElement of acdcList) {
+				acdcElement.classList.add('queen');
+				// acdcElement.classList.add('queen1');
+				// acdcElement.classList.add('queen2');
+			}
+
+        </script>
+    </body>
+</html>
