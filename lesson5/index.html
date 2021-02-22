@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+
+
+        <script>
+
+
+			// let user = {
+			// 	name: 'vasya',
+			// 	age: 123,
+			// 	greeting: function () {
+			// 		console.log('hello - ' + this.age + ' ' + this.name);
+			// 		console.log(this);
+			// 	}
+			// };
+			//
+			// console.log(user);
+			// user.greeting();
+
+
+			// function User(name, age, fn, wife) {
+			// 	//{}
+			// 	this.name = name; // {imya: name }
+			// 	this.age = age; // {imya: name , vik : age}
+			// 	// this.greeting = function (msg) {
+			// 	// 	console.log(`${msg} ${this.name} ${this.age}`);
+			// 	// };
+			// 	this.greeting = fn;
+			// 	this.wife = wife;
+			//
+			// }
+			//
+			// let u1 = new User('vasya', 123, function (msg) {console.log(msg);}, {name: 'manya'});
+			// console.log(u1);
+			//
+			// let u2 = new User('kokos', 12, (msg) => console.log(msg));
+			// console.log(u2);
+			//
+			// u1.greeting('hello');
+			// u2.greeting('hi');
+
+			// let jsonU1 = JSON.stringify(u1);
+			// console.log(jsonU1);
+
+
+			// function Element(tag, txt, background, color) {
+			// 	this.tag = tag;
+			// 	this.txt = txt;
+			// 	this.background = background;
+			// 	this.color = color;
+			//
+			// 	this.createElement = function () {
+			// 		let element = document.createElement(this.tag);
+			// 		element.innerText = this.txt;
+			// 		element.style.background = this.background;
+			// 		element.style.color = this.color;
+			// 		document.body.appendChild(element);
+			// 	};
+			// }
+			//
+			// let element1 = new Element('div', 'lorem', 'red', 'gray');
+			// element1.createElement();
+
+
+			class User {
+				constructor(name, age) {
+					this.name = name;
+					this.age = age;
+				}
+
+				greeting(msg) {
+					console.log(`${msg} ${this.name} ${this.age}`);
+
+
+				}
+			}
+
+			let u1 = new User('vasya', 123);
+			let u2 = new User('kokos', 12);
+			console.log(u1, u2);
+
+			u1.greeting('houdududu');
+			u2.greeting('hi');
+
+
+			class SuperUser extends User {
+
+				constructor(name, age, status) {
+					super(name, age);
+					this.status = status;
+				}
+
+				foobar() {
+					console.log('foobar');
+				}
+
+			}
+
+
+			let superUser = new SuperUser('max', 87, false);
+			console.log(superUser);
+
+			superUser.greeting('ohohoho');
+			superUser.foobar();
+
+
+			function xxx1(fn) {
+				fn();
+            }
+			function xxx2(obj) {
+				obj.fn();
+            }
+
+
+
+        </script>
+    </body>
+</html>
