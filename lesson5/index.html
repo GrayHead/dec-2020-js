@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <script>
+
+			// let user = {
+			// 	name: 'vasya',
+			// 	age: 123,
+			// 	greeting: function () {
+			// 		console.log('hello ' + this.name);
+			// 	},
+			//
+			// };
+			//
+			// let user2 = {
+			// 	name: 'kokos',
+			// 	age: 31,
+			// 	greeting: function () {
+			// 		console.log('hello ' + this.name + ' ' + this.age);
+			// 	},
+			//
+			// };
+			//
+			//
+			// // console.log(user.age);
+			// user.greeting();
+			// user2.greeting();
+
+
+			// function User(name, age) {
+			// 	this.name = name;
+			// 	this.age = age;
+			// 	this.greeting = function (msg) {
+			// 		console.log(`${msg} my name is ${this.name} and age is - ${this.age}`);
+			//
+			// 	};
+			// }
+			//
+			// let user = new User('vasya', 31);
+			// console.log(user);
+			// user.greeting('hello');
+			//
+			// let user1 = new User('kokos', 123);
+			// console.log(user1);
+			// user1.greeting('hi');
+
+
+			// function User(name, age, greetingFn) {
+			// 	this.name = name;
+			// 	this.age = age;
+			// 	this.greeting = greetingFn;
+			// }
+			//
+			//
+			// let x = function (msg) {console.log(msg);};
+			// let user = new User('vasya', 31, x);
+			// console.log(user);
+			// user.greeting('hello');
+			//
+			// // let user1 = new User('kokos', 123);
+			// // console.log(user1);
+			// // user1.greeting('hi');
+
+
+			// function Product(title, price, categories) {
+			// 	this.title = title;
+			// 	this.price = price;
+			// 	this.categories = categories;
+			// }
+			//
+			//
+			// let product = new Product('milk', 22, {a: 80, b: 100});
+			// let product = new Product('milk', 22, ['a', 'b']);
+
+
+			// let user = {
+			// 	name: 'vasya',
+			// 	age: 123,
+			//
+			// 	greeting: () => console.log(this)
+			// };
+			//
+			// user.greeting();
+
+			class User {
+				constructor(name, age) {
+					this.name = name;
+					this.age = age;
+				}
+
+				greeting() {
+					console.log('hello');
+				}
+
+			}
+
+			// let user = new User('vasya', 123);
+			// console.log(user);
+			// user.greeting();
+			//
+			// let s = JSON.stringify(user);
+			// let parse = JSON.parse(s);
+			// console.log(parse);
+			//
+
+			class Customer extends User {
+				constructor(name, age, status) {
+					super(name, age);
+					this.status = status;
+				}
+
+				buy() {
+					console.log('aushfdysafdajskdh 1001010101010');
+				}
+
+			}
+
+			let customer = new Customer('vasya', 31, true);
+			console.log(customer);
+			customer.greeting();
+			customer.buy();
+
+			class SuperCustomer extends Customer {
+				constructor(name, age, status) {
+					super(name, age, status);
+				}
+			}
+
+			function xxx() {
+				return 'xxxxxxxx-----';
+			}
+
+			console.log(xxx);
+
+
+        </script>
+    </body>
+</html>
