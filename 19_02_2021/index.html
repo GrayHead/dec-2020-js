@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+
+        <script>
+
+			// function two(n) {
+			// 	let res = n / 2;
+			// 	if (res == 1) {
+			// 		console.log('yes');
+			// 	} else if (res) {
+			// 	}
+			// 	two(res);
+			// }
+			// two(8);
+
+
+			// let s = a * b;
+			//         10  20
+			//         27   12
+			//         1     96
+
+			// function square(a, b) {
+			// 	return a * b;
+			// }
+
+			// 6 3.2
+			// console.log(square(6, 3.2));
+
+			// let arr = [];
+			//
+			// function fillArrayByNumbers() {
+			// 	arr = [1, 1, 1, 1, 1, 1, 2, 2, 3, 4, 5, 6, 7, 8];
+			// }
+			//
+			// console.log(arr);
+			// fillArrayByNumbers();
+			// console.log(arr);
+
+
+			// let myGlobalObject = {}; // []
+			//
+			//
+			// function square(a, b) {
+			// 	let result = a * b;
+			// 	myGlobalObject['result'] = result;
+			// 	return result;
+			// }
+			//
+			// console.log(square(10, 20));
+			// console.log(myGlobalObject);
+			//
+
+
+			// arguments;
+
+			// 2 +   /// 3 -
+
+			function twoArgs(a, b) {
+				return a + b;
+			}
+
+			function threeArgs(a, b, c) {
+				return a - b - c;
+			}
+
+
+			// overload
+			// function calc() {
+			// 	if (arguments.length === 2) {
+			// 		return twoArgs(arguments[0], arguments[1]);
+			// 	}
+			// 	if (arguments.length === 3) {
+			// 		return threeArgs(arguments[0], arguments[1], arguments[2]);
+			// 	}
+			// }
+			// calc(10, 20);
+			// calc(10, 20, 30); // -40
+
+
+			// function bar(...x) {
+			// 	console.log(x);
+			// }
+			//
+			// bar(1, 2, 3, 4, 5);
+
+			// let user = {
+			// 	id: 1,
+			// 	name: 'vasya',
+			// 	age: 13,
+			// 	status: true,
+			// 	wife: {status: false}
+			// };
+			//
+			// // let name = user.name;
+			// // let id = user.id;
+			// // let age = user.age;
+			//
+			// let {name, id, age, status, wife: {status: sts}, wife} = user;
+			//
+			// console.log(name, id, age, status, wife, sts);
+
+
+			// let user = {name: 'vasya', age: 123, wife: {name: 'olya', father: {age: 60}}};
+			//
+			// let user2 = {...user};
+			// console.log(user2);
+			// user2.status = true;
+			//
+			// let s = JSON.stringify(user);
+			// let user3 = JSON.parse(s);
+			//
+
+			let [a, b, c] = [11, 22, 33];
+			console.log(a, b, c);
+
+			let arr = [22, 33, 44];
+			let arr2 = [...arr, 55, 66];
+			console.log(arr2);
+
+			function print(...x) {
+				for (const x1 of x) {
+					console.log(x1);
+				}
+			}
+
+			print(...arr);
+
+			Math.max(...arr, 123, 354, ...arr2); // -> (22,33,44,123,354,22,33,44,55,66)
+
+
+        </script>
+        <!--        <script src="main.js"></script>-->
+    </body>
+</html>
