@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style type="text/css">
+            #box {
+                width: 200px;
+                height: 200px;
+                box-sizing: border-box;
+                border: 1px solid black;
+                transition: 300ms;
+
+            }
+        </style>
+    </head>
+    <body>
+
+        <div id="box"></div>
+
+        <input type="text" name="name">
+        <input type="number" name="age" placeholder="enter your age">
+
+        <textarea name="msg" id="" cols="30" rows="10"></textarea>
+        <button id="target">send</button>
+
+
+        <script>
+			/*1*/
+
+			let inputs = document.getElementsByTagName('input');
+
+			let target = document.getElementById('target');
+			// target.onclick = function () {
+			// 	let inputs = document.getElementsByTagName('input');
+			// 	let name = inputs[0].value;
+			// 	let age = inputs[1].value;
+			//
+			// 	let textAreaElement = document.getElementsByTagName('textarea')[0].value;
+			// 	let user = {name, age, msg: textAreaElement};
+			// 	console.log(user);
+			//
+			// };
+			//
+			// target.onclick = function () {
+			// 	console.log('hello');
+			// };
+
+			target.addEventListener('click', function () {
+				let name = inputs[0].value;
+				let age = inputs[1].value;
+
+				let textAreaElement = document.getElementsByTagName('textarea')[0].value;
+				let user = {name, age, msg: textAreaElement};
+				console.log(user);
+
+			});
+
+			target.addEventListener('click', () => console.log('hello'));
+
+			for (const input of inputs) {
+				input.addEventListener('mouseover', () => {
+					input.style.background = 'silver';
+
+				});
+
+				input.addEventListener('mouseleave', () => {
+					input.style.background = 'white';
+				});
+
+
+			}
+
+
+			/*2*/
+
+			let box = document.getElementById('box');
+
+			// box.onmousemove = function (e) {
+			// 	console.log(e.x, e.y);
+			// 	this.style.background = `rgb(${e.x},${e.y},${e.x})`;
+			// };
+
+			// let clientMap = [];
+			//
+			// document.onclick = function (e) {
+			// 	console.log(e.target);
+			// 	clientMap.push({coords: {x: e.x, y: e.y}, target: e.target});
+			// };
+			//
+			// document.ondblclick = function () {
+			// 	console.log(clientMap);
+			// };
+
+			box.onclick = (e) => {
+				let height = +getComputedStyle(box).height.replaceAll('px', ''); // 200px
+				box.style.height = height / 2 + 'px';
+
+			};
+
+
+			inputs[0].oninput = function () {
+				box.innerText = this.value;
+
+			};
+
+
+        </script>
+    </body>
+</html>
