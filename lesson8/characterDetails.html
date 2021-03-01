@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+    </head>
+    <body>
+        <h1></h1>
+
+
+        <script>
+
+
+			console.log(location);
+			console.log(location.search);
+			let url = new URL(location);
+			console.log(url);
+			let name = url.searchParams.get('name');
+			console.log(name);
+			let surname = url.searchParams.get('surname');
+			console.log(surname);
+			let full = url.searchParams.get('full');
+			console.log(JSON.parse(full));
+
+			let h1 = document.getElementsByTagName('h1')[0];
+			h1.innerText = `${name} ${surname}`;
+
+        </script>
+
+    </body>
+</html>
